@@ -1,0 +1,50 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-sizing: border-box;
+  position: absolute;
+  left: 17%;
+}
+.x {
+  position: absolute;
+  font-size: 2rem;
+  top: 1rem;
+  right: 2rem;
+  cursor: pointer;
+}
+.img {
+  height: 65rem;
+}
+.sidecomment {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-right: 8rem;
+  padding-left: 1rem;
+}
+.name {
+  font-size: 2rem;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.comm {
+  font-size: 28px;
+}
+.classes {
+  display: flex;
+  align-items: center;
+}
+.imgclass {
+  font-size: 20px;
+  width: 70px;
+}
+.head {
+  position: absolute;
+  font-size: 2rem;
+  top: 3rem;
+  right: 38rem;
+  font-weight: bold;
+}
