@@ -1,3 +1,5 @@
+import user from "./components/sidebar/user";
+
 export function seedDatabase(firebase) {
   const users = [
     {
@@ -56,10 +58,12 @@ export function seedDatabase(firebase) {
           {
             displayName: "dali",
             comment: "Love this place, looks like my animal farm!",
+            likes: false,
           },
           {
             displayName: "orwell",
             comment: "Would you mind if I used this picture?",
+            likes: false,
           },
         ],
         userLatitude: "40.7128°",

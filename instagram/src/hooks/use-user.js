@@ -15,9 +15,6 @@ export default function useUser() {
       getUserObjByUserId();
     }
   }, [user]);
-  // {
-  //   Object.keys(activeUser).length !== 0 && console.log(activeUser);
-  // }
 
-  return { user: activeUser }; // return activeUser as user to the hook when called
+  return { user: activeUser };
 }

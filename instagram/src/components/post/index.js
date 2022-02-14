@@ -36,7 +36,7 @@
 //     </div>
 //   );
 // }
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 
 import Header from "./header";
 import Image from "./image";
@@ -44,12 +44,14 @@ import Actions from "./actions";
 import Footer from "./footer";
 import Comments from "./comments";
 import { Modal } from "./comments";
-
 export default function Post({ content }) {
   const commentInput = useRef(null);
   const handleFocus = () => {
     commentInput.current.focus();
   };
+  const [toggleLiked, setToggleLiked] = useState(content.userLikedPhoto);
+
+  const [likes, setLikes] = useState(content.likes.length);
   // <Modal content={content} />;
 
   return (
@@ -58,17 +60,23 @@ export default function Post({ content }) {
       <Image src={content.imageSrc} caption={content.caption} />
       <Actions
         docId={content.docId}
-        totalLikes={content.likes.length}
-        likedPhoto={content.userLikedPhoto}
+        likes={likes}
+        toggleLiked={toggleLiked}
+        setLikes={setLikes}
         handleFocus={handleFocus}
+        content={content}
+        setToggleLiked={setToggleLiked}
       />
       <Footer username={content.username} caption={content.caption} />
       <Comments
         docId={content.docId}
-        comments={content.comments}
         posted={content.dateCreated}
         commentInput={commentInput}
         content={content}
+        toggleLiked={toggleLiked}
+        setToggleLiked={setToggleLiked}
+        setLikes={setLikes}
+        likes={likes}
       />
     </div>
   );

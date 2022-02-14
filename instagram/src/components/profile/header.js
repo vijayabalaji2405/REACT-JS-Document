@@ -50,7 +50,7 @@ export default function Header({
   }, [user.username, profileUserId]);
 
   return (
-    <div className="grid grid-cols-3 gap-4 justify-between mx-auto max-w-screen-lg">
+    <div className="grid grid-cols-3 gap-4 justify-between mx-auto max-w-screen-lg relative">
       <div className="container flex justify-center">
         <img
           className="rounded-full h-40 w-40 flex"
